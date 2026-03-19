@@ -105,7 +105,9 @@ This type of system can be used for:
 * API integrations
 
 ---
+## 📸 Preview
 
+![Landing Page](assets/images/preview.png)
 ---
 
 ##  Contact
