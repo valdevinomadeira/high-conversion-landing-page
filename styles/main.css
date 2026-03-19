@@ -1,14 +1,17 @@
 /*
-High Conversion Landing Page
-Final Professional Version
-Focus: UX, UI, Conversion and System Visualization
+Marketing Automation Landing Page
+Final System-Level UI
+Author: Markzal (Concept)
+Focus: UX, Conversion, System Visualization
 */
+
+/* RESET */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
 body {
@@ -21,27 +24,27 @@ body {
 
 .container {
   width: 90%;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
 }
 
-/* GLOBAL SPACING */
+/* SECTIONS */
 
 section {
-  padding: 80px 0;
+  padding: 100px 0;
 }
 
 /* HERO */
 
 .hero {
-  padding: 120px 0 80px;
+  padding-top: 140px;
 }
 
 .hero-flex {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
+  gap: 60px;
   flex-wrap: wrap;
 }
 
@@ -51,21 +54,23 @@ section {
 }
 
 .hero-text h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
+  font-size: 3.2rem;
+  margin-bottom: 25px;
+  line-height: 1.2;
   background: linear-gradient(90deg, #ffffff, #60a5fa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .hero-text p {
+  font-size: 1.15rem;
   color: #94a3b8;
-  margin-bottom: 25px;
-  font-size: 1.1rem;
+  margin-bottom: 30px;
 }
 
 .subtext {
   margin-top: 20px;
+  font-size: 0.9rem;
   color: #64748b;
 }
 
@@ -76,8 +81,8 @@ section {
 
 .hero-image img {
   max-width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  border-radius: 14px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.6);
 }
 
 /* BUTTON */
@@ -85,33 +90,32 @@ section {
 .btn {
   background: linear-gradient(90deg, #3b82f6, #2563eb);
   color: white;
-  padding: 14px 30px;
-  border-radius: 8px;
+  padding: 14px 32px;
+  border-radius: 10px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
   display: inline-block;
   transition: all 0.3s ease;
 }
 
 .btn:hover {
   transform: scale(1.08);
-  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+  box-shadow: 0 12px 30px rgba(59, 130, 246, 0.5);
 }
 
-/* FEATURES / GRID */
+/* TITLES */
 
-.features {
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 50px;
   text-align: center;
 }
 
-.features h2 {
-  margin-bottom: 40px;
-  font-size: 2rem;
-}
+/* GRID */
 
 .grid {
   display: flex;
-  gap: 20px;
+  gap: 25px;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -120,9 +124,9 @@ section {
 
 .card {
   background: rgba(30, 41, 59, 0.6);
-  backdrop-filter: blur(10px);
-  padding: 25px;
-  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 14px;
   width: 300px;
   text-align: center;
   transition: all 0.3s ease;
@@ -130,41 +134,38 @@ section {
 
 .card h3 {
   margin-bottom: 10px;
+  font-size: 1.3rem;
 }
 
 .card p {
   color: #94a3b8;
+  font-size: 0.95rem;
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
 }
 
 /* ICONS */
 
 .icon {
-  width: 50px;
+  width: 55px;
   margin-bottom: 15px;
 }
 
 /* BENEFITS */
 
-.benefits {
-  text-align: center;
-}
-
-.benefits h2 {
-  margin-bottom: 30px;
-}
-
 .benefits ul {
   list-style: none;
+  max-width: 500px;
+  margin: auto;
 }
 
 .benefits li {
-  margin: 12px 0;
+  margin: 14px 0;
   font-size: 1.1rem;
+  text-align: center;
 }
 
 /* DIAGRAM */
@@ -173,28 +174,30 @@ section {
   text-align: center;
 }
 
-.diagram h2 {
-  margin-bottom: 30px;
-}
-
 .diagram-img {
   max-width: 100%;
+  margin-top: 30px;
   border-radius: 12px;
-  margin-top: 20px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
 }
 
 /* TESTIMONIAL */
 
 .testimonial {
   text-align: center;
-  font-style: italic;
-  color: #cbd5f5;
+  max-width: 700px;
+  margin: auto;
 }
 
 .testimonial blockquote {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  font-style: italic;
   margin-bottom: 10px;
+  color: #cbd5f5;
+}
+
+.testimonial p {
+  color: #94a3b8;
 }
 
 /* CTA */
@@ -210,16 +213,22 @@ section {
 }
 
 .cta h2 {
-  margin-bottom: 20px;
-  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+/* METRICS CARDS (DESTAQUE) */
+
+.features .card h3 {
+  font-size: 1.6rem;
+  color: #60a5fa;
 }
 
 /* RESPONSIVE */
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 
   .hero-text h1 {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
   }
 
   .hero-flex {
