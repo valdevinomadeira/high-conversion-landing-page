@@ -107,7 +107,7 @@ This type of system can be used for:
 ---
 ## 📸 Preview
 
-![Landing Page](assets/images/preview.png)
+[Landing Page](assets/images/preview.png)
 ---
 
 ##  Contact
