@@ -1,121 +1,88 @@
-/*
-Marketing Automation Landing Page
-Final System-Level UI
-Author: Markzal (Concept)
-Focus: UX, Conversion, System Visualization
-*/
-
-/* RESET */
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 body {
-  background: radial-gradient(circle at top, #0f172a, #020617);
+  background: #020617;
   color: #e2e8f0;
   line-height: 1.6;
 }
 
-/* CONTAINER */
+/* LAYOUT */
 
 .container {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: auto;
 }
 
-/* SECTIONS */
-
-section {
+.section {
   padding: 100px 0;
 }
 
 /* HERO */
 
 .hero {
-  padding-top: 140px;
+  padding: 140px 0 80px;
 }
 
 .hero-flex {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 60px;
   flex-wrap: wrap;
 }
 
 .hero-text {
   flex: 1;
-  min-width: 300px;
 }
 
 .hero-text h1 {
-  font-size: 3.2rem;
-  margin-bottom: 25px;
-  line-height: 1.2;
-  background: linear-gradient(90deg, #ffffff, #60a5fa);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
+  margin-bottom: 20px;
 }
 
 .hero-text p {
-  font-size: 1.15rem;
   color: #94a3b8;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .subtext {
-  margin-top: 20px;
   font-size: 0.9rem;
   color: #64748b;
 }
 
-.hero-image {
-  flex: 1;
-  text-align: center;
-}
-
 .hero-image img {
   max-width: 100%;
-  border-radius: 14px;
-  box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+  border-radius: 10px;
 }
 
 /* BUTTON */
 
 .btn {
-  background: linear-gradient(90deg, #3b82f6, #2563eb);
+  background: #3b82f6;
+  padding: 12px 28px;
+  border-radius: 8px;
   color: white;
-  padding: 14px 32px;
-  border-radius: 10px;
   text-decoration: none;
-  font-weight: 600;
   display: inline-block;
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-  transform: scale(1.08);
-  box-shadow: 0 12px 30px rgba(59, 130, 246, 0.5);
 }
 
 /* TITLES */
 
 h2 {
-  font-size: 2.2rem;
-  margin-bottom: 50px;
   text-align: center;
+  margin-bottom: 40px;
 }
 
 /* GRID */
 
 .grid {
   display: flex;
-  gap: 25px;
+  gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -123,49 +90,31 @@ h2 {
 /* CARDS */
 
 .card {
-  background: rgba(30, 41, 59, 0.6);
-  backdrop-filter: blur(12px);
-  padding: 30px;
-  border-radius: 14px;
-  width: 300px;
+  background: #0f172a;
+  padding: 25px;
+  border-radius: 10px;
+  width: 260px;
   text-align: center;
-  transition: all 0.3s ease;
 }
 
 .card h3 {
   margin-bottom: 10px;
-  font-size: 1.3rem;
 }
 
 .card p {
   color: #94a3b8;
-  font-size: 0.95rem;
 }
 
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
-}
+/* HIGHLIGHT */
 
-/* ICONS */
-
-.icon {
-  width: 55px;
-  margin-bottom: 15px;
-}
-
-/* BENEFITS */
-
-.benefits ul {
-  list-style: none;
-  max-width: 500px;
-  margin: auto;
-}
-
-.benefits li {
-  margin: 14px 0;
-  font-size: 1.1rem;
+.highlight {
   text-align: center;
+}
+
+.center-text {
+  max-width: 600px;
+  margin: auto;
+  color: #94a3b8;
 }
 
 /* DIAGRAM */
@@ -174,75 +123,24 @@ h2 {
   text-align: center;
 }
 
-.diagram-img {
+.diagram img {
   max-width: 100%;
   margin-top: 30px;
-  border-radius: 12px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-}
-
-/* TESTIMONIAL */
-
-.testimonial {
-  text-align: center;
-  max-width: 700px;
-  margin: auto;
-}
-
-.testimonial blockquote {
-  font-size: 1.3rem;
-  font-style: italic;
-  margin-bottom: 10px;
-  color: #cbd5f5;
-}
-
-.testimonial p {
-  color: #94a3b8;
+  border-radius: 10px;
 }
 
 /* CTA */
 
 .cta {
   text-align: center;
-}
-
-.cta .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.cta h2 {
-  margin-bottom: 25px;
-}
-
-/* METRICS CARDS (DESTAQUE) */
-
-.features .card h3 {
-  font-size: 1.6rem;
-  color: #60a5fa;
+  padding: 100px 0;
 }
 
 /* RESPONSIVE */
 
-@media (max-width: 900px) {
-
-  .hero-text h1 {
-    font-size: 2.4rem;
-  }
-
+@media (max-width: 768px) {
   .hero-flex {
     flex-direction: column;
     text-align: center;
   }
-
-  .hero-text {
-    text-align: center;
-  }
-
-  .grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
 }
