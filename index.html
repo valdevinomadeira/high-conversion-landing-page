@@ -11,204 +11,179 @@
 
 <body>
 
-  <!-- NAVBAR -->
-  <header class="navbar glass">
-    <div class="container nav-flex">
+<header class="navbar glass">
+  <div class="container nav-flex">
 
-      <div class="brand">
-        <img src="assets/images/markzal.png" class="logo-icon">
-        <img src="assets/images/name-markzal.png" class="logo-text">
-      </div>
-
-      <nav class="nav-links">
-        <a href="#">System</a>
-        <a href="#">Modules</a>
-        <a href="#">Contact</a>
-      </nav>
-
+    <div class="brand">
+      <img src="assets/images/markzal.png" class="logo-icon">
+      <img src="assets/images/name-markzal.png" class="logo-text">
     </div>
-  </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-content">
+    <nav class="nav-links">
+      <a href="#">System</a>
+      <a href="#">Modules</a>
+      <a href="#" id="openModalNav">Get Started</a>
+    </nav>
 
-      <div class="hero-text">
-        <h1 class="reveal">
-          Build your <span>automation system</span>
-        </h1>
-
-        <p class="reveal delay-1">
-          A structured digital architecture designed to generate, manage and convert leads.
-        </p>
-
-        <div class="hero-buttons reveal delay-2">
-          <a href="#" class="btn-primary">Start System</a>
-          <a href="#" class="btn-secondary">View Architecture</a>
-        </div>
-      </div>
-
-      <div class="hero-image reveal delay-3">
-        <img src="assets/images/dashboard.png">
-      </div>
-
-    </div>
-  </section>
-
-  <!-- MODULES -->
-  <section class="section">
-    <div class="container">
-
-      <div class="section-header">
-        <h2 class="reveal">System Modules</h2>
-        <p class="reveal delay-1">
-          Each part of your growth engine is connected and automated.
-        </p>
-      </div>
-
-      <div class="grid">
-        <div class="card glass reveal">
-          <h3>Lead Capture</h3>
-          <p>Landing pages and forms connected to your system</p>
-        </div>
-
-        <div class="card glass reveal delay-1">
-          <h3>Automation</h3>
-          <p>Workflows that nurture and qualify leads</p>
-        </div>
-
-        <div class="card glass reveal delay-2">
-          <h3>CRM Integration</h3>
-          <p>Centralized data and customer management</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- PROBLEM -->
-  <section class="section">
-    <div class="container">
-
-      <div class="section-header">
-        <h2 class="reveal">Without a system, growth breaks</h2>
-      </div>
-
-      <div class="grid">
-        <div class="card reveal">
-          <img src="assets/images/icon-leads.png" class="icon">
-          <h3>Unpredictable Leads</h3>
-        </div>
-
-        <div class="card reveal delay-1">
-          <img src="assets/images/icon-work.png" class="icon">
-          <h3>Manual Work</h3>
-        </div>
-
-        <div class="card reveal delay-2">
-          <img src="assets/images/icon-system.png" class="icon">
-          <h3>No Structure</h3>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- DIAGRAM -->
-  <section class="section highlight">
-    <div class="container">
-
-      <div class="section-header">
-        <h2 class="reveal">System Architecture</h2>
-      </div>
-
-      <div class="diagram-box reveal delay-1">
-        <img src="assets/images/diagram.png">
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta">
-    <div class="container cta-box reveal">
-      <h2>Start building your system today</h2>
-      <a href="#" class="btn-primary">Create Your System</a>
-    </div>
-  </section>
-
-  <!-- MODAL -->
-  <div class="modal" id="leadModal">
-    <div class="modal-content">
-
-      <span class="close">&times;</span>
-
-      <h2>Start Your Automation</h2>
-
-      <form id="leadForm">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <input type="tel" placeholder="Your Phone">
-
-        <select>
-          <option>Choose your interest</option>
-          <option>Automation System</option>
-          <option>Landing Page</option>
-          <option>Full Solution</option>
-        </select>
-
-        <button type="submit" class="btn-primary">Submit</button>
-      </form>
-
-    </div>
   </div>
+</header>
 
-  <!-- WHATSAPP -->
-  <a href="https://wa.me/5511999999999?text=Quero%20automatizar%20meu%20negócio"
-     class="whatsapp-button"
-     target="_blank">💬</a>
+<section class="hero">
+  <div class="container hero-content">
 
-  <!-- SCRIPT -->
-  <script>
-    const elements = document.querySelectorAll('.reveal');
+    <div class="hero-text">
+      <h1>Build your <span>automation system</span></h1>
 
-    function reveal() {
-      const trigger = window.innerHeight * 0.85;
+      <p>
+        A structured digital architecture designed to generate, manage and convert leads.
+      </p>
 
-      elements.forEach(el => {
-        const top = el.getBoundingClientRect().top;
-        if (top < trigger) {
-          el.classList.add('active');
-        }
-      });
-    }
+      <div class="hero-buttons">
+        <a href="#" class="btn-primary open-modal">Get Started</a>
+        <a href="#" class="btn-secondary">View Architecture</a>
+      </div>
+    </div>
 
-    window.addEventListener('scroll', reveal);
-    reveal();
+    <div class="hero-image">
+      <img src="assets/images/dashboard.png">
+    </div>
 
-    const modal = document.getElementById("leadModal");
-    const openButtons = document.querySelectorAll(".btn-primary");
-    const closeBtn = document.querySelector(".close");
+  </div>
+</section>
 
-    openButtons.forEach(btn => {
-      btn.addEventListener("click", function(e) {
-        e.preventDefault();
-        modal.style.display = "flex";
-      });
-    });
+<section class="section">
+  <div class="container">
 
-    closeBtn.onclick = () => modal.style.display = "none";
+    <div class="section-header">
+      <h2>System Modules</h2>
+      <p>Each part of your growth engine is connected and automated.</p>
+    </div>
 
-    window.onclick = (e) => {
-      if (e.target == modal) modal.style.display = "none";
-    };
+    <div class="grid">
 
-    document.getElementById("leadForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-      alert("Lead captured! (Future CRM integration)");
-      modal.style.display = "none";
-    });
-  </script>
+      <div class="card glass">
+        <h3>Lead Capture</h3>
+        <p>High-converting landing pages and lead entry points.</p>
+      </div>
+
+      <div class="card glass">
+        <h3>Automation</h3>
+        <p>Smart workflows to qualify and nurture leads.</p>
+      </div>
+
+      <div class="card glass">
+        <h3>CRM Integration</h3>
+        <p>Centralized data and pipeline visibility.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="section-header">
+      <h2>Without a system, growth breaks</h2>
+    </div>
+
+    <div class="grid">
+
+      <div class="card">
+        <img src="assets/images/icon-leads.png" class="icon">
+        <h3>Unpredictable Leads</h3>
+      </div>
+
+      <div class="card">
+        <img src="assets/images/icon-work.png" class="icon">
+        <h3>Manual Work</h3>
+      </div>
+
+      <div class="card">
+        <img src="assets/images/icon-system.png" class="icon">
+        <h3>No Structure</h3>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="section highlight">
+  <div class="container">
+
+    <div class="section-header">
+      <h2>System Architecture</h2>
+    </div>
+
+    <div class="diagram-wrapper">
+      <img src="assets/images/diagram.png">
+    </div>
+
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container cta-box">
+
+    <h2>Start building your system today</h2>
+    <p>Automate, integrate and scale your business.</p>
+
+    <a href="#" class="btn-primary open-modal">Create Your System</a>
+
+  </div>
+</section>
+
+<!-- MODAL -->
+<div class="modal" id="leadModal">
+  <div class="modal-content">
+
+    <span class="close">&times;</span>
+
+    <h2>Start Your Automation</h2>
+
+    <form id="leadForm">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="tel" placeholder="Your Phone">
+
+      <select>
+        <option>Choose your interest</option>
+        <option>Automation System</option>
+        <option>Landing Page</option>
+        <option>Full Solution</option>
+      </select>
+
+      <button type="submit" class="btn-primary">Submit</button>
+    </form>
+
+  </div>
+</div>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/5511999999999?text=Quero%20automatizar%20meu%20negócio"
+   class="whatsapp-button"
+   target="_blank">💬</a>
+
+<script>
+const modal = document.getElementById("leadModal");
+const openBtns = document.querySelectorAll(".open-modal");
+const closeBtn = document.querySelector(".close");
+
+openBtns.forEach(btn => {
+  btn.addEventListener("click", e => {
+    e.preventDefault();
+    modal.style.display = "flex";
+  });
+});
+
+closeBtn.onclick = () => modal.style.display = "none";
+
+window.onclick = (e) => {
+  if (e.target == modal) modal.style.display = "none";
+};
+</script>
 
 </body>
 </html>
