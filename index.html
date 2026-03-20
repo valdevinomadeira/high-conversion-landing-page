@@ -11,7 +11,7 @@
 
 <body>
 
-<!-- NAV -->
+<!-- NAVBAR -->
 <header class="navbar">
   <div class="container nav">
 
@@ -33,7 +33,7 @@
 <section class="hero">
   <div class="container hero-grid">
 
-    <div>
+    <div class="fade-up">
       <h1>Build your <span>automation system</span></h1>
       <p>Generate, manage and convert leads with structure.</p>
 
@@ -43,7 +43,7 @@
       </div>
     </div>
 
-    <div class="hero-image">
+    <div class="hero-image fade-up delay">
       <img src="assets/images/dashboard.png">
     </div>
 
@@ -54,23 +54,23 @@
 <section class="section">
   <div class="container">
 
-    <h2>System Modules</h2>
+    <h2 class="fade-up">System Modules</h2>
 
     <div class="grid">
 
-      <div class="card">
+      <div class="card fade-up">
         <img src="assets/images/card-leads.png">
         <h3>Lead Capture</h3>
         <p>High converting entry points.</p>
       </div>
 
-      <div class="card">
+      <div class="card fade-up delay">
         <img src="assets/images/card-automation.png">
         <h3>Automation</h3>
         <p>Smart workflows and sequences.</p>
       </div>
 
-      <div class="card">
+      <div class="card fade-up delay2">
         <img src="assets/images/card-crm.png">
         <h3>CRM</h3>
         <p>Centralized data and pipeline.</p>
@@ -85,21 +85,21 @@
 <section class="section alt">
   <div class="container">
 
-    <h2>Without structure, growth collapses</h2>
+    <h2 class="fade-up">Without structure, growth collapses</h2>
 
     <div class="grid">
 
-      <div class="card">
+      <div class="card fade-up">
         <img src="assets/images/problem-leads.png">
         <h3>Unpredictable Leads</h3>
       </div>
 
-      <div class="card">
+      <div class="card fade-up delay">
         <img src="assets/images/problem-work.png">
         <h3>Manual Work</h3>
       </div>
 
-      <div class="card">
+      <div class="card fade-up delay2">
         <img src="assets/images/problem-system.png">
         <h3>No System</h3>
       </div>
@@ -113,9 +113,9 @@
 <section class="section">
   <div class="container">
 
-    <h2>System Architecture</h2>
+    <h2 class="fade-up">System Architecture</h2>
 
-    <div class="diagram">
+    <div class="diagram fade-up delay">
       <img src="assets/images/diagram.png">
     </div>
 
@@ -124,7 +124,7 @@
 
 <!-- CTA -->
 <section class="cta">
-  <div class="container">
+  <div class="container fade-up">
 
     <h2>Start building your system</h2>
     <p>Automation + Integration + Growth</p>
@@ -144,6 +144,7 @@
 
     <input placeholder="Name">
     <input placeholder="Email">
+
     <button class="btn">Submit</button>
 
   </div>
@@ -155,14 +156,14 @@ const modal = document.getElementById("modal");
 document.querySelectorAll(".open-modal").forEach(btn=>{
   btn.onclick = e=>{
     e.preventDefault();
-    modal.style.display="flex";
+    modal.classList.add("active");
   }
 });
 
-document.querySelector(".close").onclick=()=>modal.style.display="none";
+document.querySelector(".close").onclick=()=>modal.classList.remove("active");
 
 window.onclick=e=>{
-  if(e.target==modal) modal.style.display="none";
+  if(e.target==modal) modal.classList.remove("active");
 };
 </script>
 
