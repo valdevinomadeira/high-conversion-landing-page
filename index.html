@@ -11,7 +11,8 @@
 
 <body>
 
-<header class="navbar glass">
+<!-- NAVBAR -->
+<header class="navbar">
   <div class="container nav-flex">
 
     <div class="brand">
@@ -22,58 +23,62 @@
     <nav class="nav-links">
       <a href="#">System</a>
       <a href="#">Modules</a>
-      <a href="#" id="openModalNav">Get Started</a>
+      <a href="#" class="open-modal">Get Started</a>
     </nav>
 
   </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-  <div class="container hero-content">
+  <div class="container hero-grid">
 
-    <div class="hero-text">
-      <h1>Build your <span>automation system</span></h1>
+    <div class="hero-left">
+      <h1>
+        Build your <span>automation system</span>
+      </h1>
 
       <p>
-        A structured digital architecture designed to generate, manage and convert leads.
+        A structured digital architecture to generate, manage and convert leads.
       </p>
 
-      <div class="hero-buttons">
+      <div class="hero-actions">
         <a href="#" class="btn-primary open-modal">Get Started</a>
         <a href="#" class="btn-secondary">View Architecture</a>
       </div>
     </div>
 
-    <div class="hero-image">
+    <div class="hero-right">
       <img src="assets/images/dashboard.png">
     </div>
 
   </div>
 </section>
 
+<!-- MODULES -->
 <section class="section">
   <div class="container">
 
     <div class="section-header">
       <h2>System Modules</h2>
-      <p>Each part of your growth engine is connected and automated.</p>
+      <p>Each part of your growth engine working together.</p>
     </div>
 
-    <div class="grid">
+    <div class="cards-grid">
 
-      <div class="card glass">
+      <div class="card">
         <h3>Lead Capture</h3>
-        <p>High-converting landing pages and lead entry points.</p>
+        <p>Optimized landing pages and entry points.</p>
       </div>
 
-      <div class="card glass">
+      <div class="card">
         <h3>Automation</h3>
-        <p>Smart workflows to qualify and nurture leads.</p>
+        <p>Smart workflows to qualify and nurture.</p>
       </div>
 
-      <div class="card glass">
+      <div class="card">
         <h3>CRM Integration</h3>
-        <p>Centralized data and pipeline visibility.</p>
+        <p>Centralized pipeline and data tracking.</p>
       </div>
 
     </div>
@@ -81,28 +86,29 @@
   </div>
 </section>
 
-<section class="section">
+<!-- PROBLEMS -->
+<section class="section alt">
   <div class="container">
 
     <div class="section-header">
-      <h2>Without a system, growth breaks</h2>
+      <h2>Without structure, growth collapses</h2>
     </div>
 
-    <div class="grid">
+    <div class="cards-grid">
 
-      <div class="card">
-        <img src="assets/images/icon-leads.png" class="icon">
+      <div class="card small">
+        <img src="assets/images/icon-leads.png">
         <h3>Unpredictable Leads</h3>
       </div>
 
-      <div class="card">
-        <img src="assets/images/icon-work.png" class="icon">
+      <div class="card small">
+        <img src="assets/images/icon-work.png">
         <h3>Manual Work</h3>
       </div>
 
-      <div class="card">
-        <img src="assets/images/icon-system.png" class="icon">
-        <h3>No Structure</h3>
+      <div class="card small">
+        <img src="assets/images/icon-system.png">
+        <h3>No System</h3>
       </div>
 
     </div>
@@ -110,78 +116,76 @@
   </div>
 </section>
 
-<section class="section highlight">
+<!-- ARCHITECTURE -->
+<section class="section">
   <div class="container">
 
     <div class="section-header">
       <h2>System Architecture</h2>
     </div>
 
-    <div class="diagram-wrapper">
+    <div class="diagram-container">
       <img src="assets/images/diagram.png">
     </div>
 
   </div>
 </section>
 
+<!-- CTA -->
 <section class="cta">
-  <div class="container cta-box">
+  <div class="container">
 
-    <h2>Start building your system today</h2>
-    <p>Automate, integrate and scale your business.</p>
-
-    <a href="#" class="btn-primary open-modal">Create Your System</a>
+    <div class="cta-content">
+      <h2>Start building your system today</h2>
+      <p>Automate, integrate and scale your business.</p>
+      <a href="#" class="btn-primary open-modal">Create Your System</a>
+    </div>
 
   </div>
 </section>
 
 <!-- MODAL -->
 <div class="modal" id="leadModal">
-  <div class="modal-content">
+  <div class="modal-box">
 
     <span class="close">&times;</span>
 
     <h2>Start Your Automation</h2>
 
-    <form id="leadForm">
+    <form>
       <input type="text" placeholder="Your Name" required>
       <input type="email" placeholder="Your Email" required>
       <input type="tel" placeholder="Your Phone">
 
       <select>
-        <option>Choose your interest</option>
-        <option>Automation System</option>
+        <option>Select interest</option>
+        <option>Automation</option>
         <option>Landing Page</option>
-        <option>Full Solution</option>
       </select>
 
-      <button type="submit" class="btn-primary">Submit</button>
+      <button class="btn-primary">Submit</button>
     </form>
 
   </div>
 </div>
 
 <!-- WHATSAPP -->
-<a href="https://wa.me/5511999999999?text=Quero%20automatizar%20meu%20negócio"
-   class="whatsapp-button"
-   target="_blank">💬</a>
+<a href="https://wa.me/5511999999999?text=Quero%20automatizar"
+   class="whatsapp">💬</a>
 
 <script>
 const modal = document.getElementById("leadModal");
-const openBtns = document.querySelectorAll(".open-modal");
-const closeBtn = document.querySelector(".close");
-
-openBtns.forEach(btn => {
-  btn.addEventListener("click", e => {
+document.querySelectorAll(".open-modal").forEach(btn=>{
+  btn.onclick = e=>{
     e.preventDefault();
-    modal.style.display = "flex";
-  });
+    modal.style.display="flex";
+  }
 });
 
-closeBtn.onclick = () => modal.style.display = "none";
+document.querySelector(".close").onclick=()=>modal.style.display="none";
 
-window.onclick = (e) => {
-  if (e.target == modal) modal.style.display = "none";
+window.onclick=e=>{
+  if(e.target==modal) modal.style.display="none";
 };
 </script>
 
