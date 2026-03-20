@@ -3,18 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Markzal Automation</title>
+  <title>Markzal System</title>
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
 
   <!-- NAV -->
-  <header class="navbar">
+  <header class="navbar glass">
     <div class="container nav-flex">
       <div class="logo">Markzal</div>
       <nav>
@@ -27,23 +25,26 @@
 
   <!-- HERO -->
   <section class="hero">
+
+    <div class="gradient-bg"></div>
+
     <div class="container hero-center">
 
-      <h1 class="fade-up">
-        Build a scalable <span>automation system</span>
+      <h1 class="reveal">
+        Build a scalable <span>growth system</span>
       </h1>
 
-      <p class="fade-up delay-1">
-        Design, automate and scale your business with a structured digital growth engine.
+      <p class="reveal delay-1">
+        A complete automation architecture designed to generate and convert leads.
       </p>
 
-      <div class="hero-cta fade-up delay-2">
+      <div class="hero-cta reveal delay-2">
         <a href="#" class="btn-primary">Start Now</a>
-        <a href="#" class="btn-secondary">View System</a>
+        <a href="#" class="btn-secondary">View Architecture</a>
       </div>
 
-      <div class="hero-image fade-up delay-3">
-        <img src="assets/images/dashboard.png" alt="Dashboard">
+      <div class="hero-image reveal delay-3">
+        <img src="assets/images/dashboard.png">
       </div>
 
     </div>
@@ -53,27 +54,23 @@
   <section class="section">
     <div class="container narrow">
 
-      <h2 class="fade-up">Growth shouldn't depend on effort</h2>
-
-      <p class="center-text fade-up delay-1">
-        Most businesses operate without a structured system, leading to inefficiency and unpredictability.
-      </p>
+      <h2 class="reveal">Most businesses operate without a system</h2>
 
       <div class="grid">
 
-        <div class="card fade-up delay-2">
+        <div class="card glass reveal">
           <img src="assets/images/icon-leads.png" class="icon">
           <h3>Unpredictable Leads</h3>
         </div>
 
-        <div class="card fade-up delay-3">
+        <div class="card glass reveal delay-1">
           <img src="assets/images/icon-work.png" class="icon">
           <h3>Manual Work</h3>
         </div>
 
-        <div class="card fade-up delay-4">
+        <div class="card glass reveal delay-2">
           <img src="assets/images/icon-system.png" class="icon">
-          <h3>No System</h3>
+          <h3>No Structure</h3>
         </div>
 
       </div>
@@ -85,36 +82,10 @@
   <section class="section highlight">
     <div class="container">
 
-      <h2 class="fade-up">A complete growth engine</h2>
+      <h2 class="reveal">Your growth engine</h2>
 
-      <div class="diagram-wrapper fade-up delay-1">
+      <div class="diagram-wrapper reveal delay-1">
         <img src="assets/images/diagram.png" class="diagram">
-      </div>
-
-    </div>
-  </section>
-
-  <!-- STEPS -->
-  <section class="section">
-    <div class="container">
-
-      <div class="grid">
-
-        <div class="card fade-up">
-          <h3>Attract</h3>
-          <p>Bring qualified traffic</p>
-        </div>
-
-        <div class="card fade-up delay-1">
-          <h3>Capture</h3>
-          <p>Convert into leads</p>
-        </div>
-
-        <div class="card fade-up delay-2">
-          <h3>Convert</h3>
-          <p>Automate sales</p>
-        </div>
-
       </div>
 
     </div>
@@ -122,11 +93,31 @@
 
   <!-- CTA -->
   <section class="cta">
-    <div class="container hero-center fade-up">
-      <h2>Start building your system today</h2>
+    <div class="container hero-center reveal">
+      <h2>Start building your system</h2>
       <a href="#" class="btn-primary">Get Started</a>
     </div>
   </section>
+
+  <!-- SCRIPT ANIMAÇÃO -->
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+
+    function revealOnScroll() {
+      const trigger = window.innerHeight * 0.85;
+
+      reveals.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+
+        if (top < trigger) {
+          el.classList.add('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+  </script>
 
 </body>
 </html>
