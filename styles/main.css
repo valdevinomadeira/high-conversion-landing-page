@@ -29,7 +29,7 @@ body {
   margin: auto;
 }
 
-/* NAVBAR GLASS */
+/* NAVBAR */
 
 .navbar {
   position: sticky;
@@ -49,6 +49,27 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
+/* BRAND */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  height: 32px;
+  width: auto;
+}
+
+.logo-text {
+  height: 18px;
+  width: auto;
+  opacity: 0.9;
+}
+
+/* NAV LINKS */
 
 .nav-links a {
   margin-left: 24px;
@@ -76,11 +97,13 @@ body {
 
 .hero-text {
   flex: 1;
+  min-width: 300px;
 }
 
 .hero-text h1 {
   font-size: 3rem;
   margin-bottom: 24px;
+  line-height: 1.2;
 }
 
 .hero-text span {
@@ -98,6 +121,7 @@ body {
 .hero-buttons {
   display: flex;
   gap: 16px;
+  flex-wrap: wrap;
 }
 
 .hero-image {
@@ -189,6 +213,11 @@ body {
   border-radius: 10px;
   color: white;
   text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
 }
 
 .btn-secondary {
@@ -219,6 +248,10 @@ body {
   .hero-content {
     flex-direction: column;
     text-align: center;
+  }
+
+  .hero-text p {
+    margin: auto;
   }
 
 }
