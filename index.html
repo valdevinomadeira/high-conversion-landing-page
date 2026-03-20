@@ -5,17 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Markzal System</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
 
   <!-- NAV -->
-  <header class="navbar glass">
+  <header class="navbar">
     <div class="container nav-flex">
       <div class="logo">Markzal</div>
-      <nav>
+
+      <nav class="nav-links">
         <a href="#">System</a>
         <a href="#">Architecture</a>
         <a href="#">Contact</a>
@@ -25,26 +26,25 @@
 
   <!-- HERO -->
   <section class="hero">
+    <div class="container hero-content">
 
-    <div class="gradient-bg"></div>
+      <div class="hero-text">
+        <h1 class="reveal">
+          Build a scalable <span>growth system</span>
+        </h1>
 
-    <div class="container hero-center">
+        <p class="reveal delay-1">
+          Design and automate your business with a structured digital architecture that scales.
+        </p>
 
-      <h1 class="reveal">
-        Build a scalable <span>growth system</span>
-      </h1>
-
-      <p class="reveal delay-1">
-        A complete automation architecture designed to generate and convert leads.
-      </p>
-
-      <div class="hero-cta reveal delay-2">
-        <a href="#" class="btn-primary">Start Now</a>
-        <a href="#" class="btn-secondary">View Architecture</a>
+        <div class="hero-buttons reveal delay-2">
+          <a href="#" class="btn-primary">Start Now</a>
+          <a href="#" class="btn-secondary">View Architecture</a>
+        </div>
       </div>
 
       <div class="hero-image reveal delay-3">
-        <img src="assets/images/dashboard.png">
+        <img src="assets/images/dashboard.png" alt="Dashboard">
       </div>
 
     </div>
@@ -52,23 +52,28 @@
 
   <!-- PROBLEM -->
   <section class="section">
-    <div class="container narrow">
+    <div class="container">
 
-      <h2 class="reveal">Most businesses operate without a system</h2>
+      <div class="section-header">
+        <h2 class="reveal">Growth without structure creates chaos</h2>
+        <p class="reveal delay-1">
+          Without a system, businesses rely on effort instead of predictable processes.
+        </p>
+      </div>
 
       <div class="grid">
 
-        <div class="card glass reveal">
+        <div class="card reveal">
           <img src="assets/images/icon-leads.png" class="icon">
           <h3>Unpredictable Leads</h3>
         </div>
 
-        <div class="card glass reveal delay-1">
+        <div class="card reveal delay-1">
           <img src="assets/images/icon-work.png" class="icon">
           <h3>Manual Work</h3>
         </div>
 
-        <div class="card glass reveal delay-2">
+        <div class="card reveal delay-2">
           <img src="assets/images/icon-system.png" class="icon">
           <h3>No Structure</h3>
         </div>
@@ -82,10 +87,38 @@
   <section class="section highlight">
     <div class="container">
 
-      <h2 class="reveal">Your growth engine</h2>
+      <div class="section-header">
+        <h2 class="reveal">A complete growth engine</h2>
+      </div>
 
-      <div class="diagram-wrapper reveal delay-1">
-        <img src="assets/images/diagram.png" class="diagram">
+      <div class="diagram-box reveal delay-1">
+        <img src="assets/images/diagram.png" alt="System Diagram">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STEPS -->
+  <section class="section">
+    <div class="container">
+
+      <div class="grid steps">
+
+        <div class="card reveal">
+          <h3>Attract</h3>
+          <p>Bring qualified traffic into your system</p>
+        </div>
+
+        <div class="card reveal delay-1">
+          <h3>Capture</h3>
+          <p>Convert visitors into leads</p>
+        </div>
+
+        <div class="card reveal delay-2">
+          <h3>Convert</h3>
+          <p>Automate sales and engagement</p>
+        </div>
+
       </div>
 
     </div>
@@ -93,30 +126,29 @@
 
   <!-- CTA -->
   <section class="cta">
-    <div class="container hero-center reveal">
-      <h2>Start building your system</h2>
+    <div class="container cta-box reveal">
+      <h2>Start building your system today</h2>
       <a href="#" class="btn-primary">Get Started</a>
     </div>
   </section>
 
-  <!-- SCRIPT ANIMAÇÃO -->
+  <!-- SCRIPT -->
   <script>
-    const reveals = document.querySelectorAll('.reveal');
+    const elements = document.querySelectorAll('.reveal');
 
-    function revealOnScroll() {
+    function reveal() {
       const trigger = window.innerHeight * 0.85;
 
-      reveals.forEach(el => {
+      elements.forEach(el => {
         const top = el.getBoundingClientRect().top;
-
         if (top < trigger) {
           el.classList.add('active');
         }
       });
     }
 
-    window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll();
+    window.addEventListener('scroll', reveal);
+    reveal();
   </script>
 
 </body>
