@@ -3,26 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Markzal System</title>
+  <title>Markzal</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
 
+<!-- NAV -->
 <header class="navbar">
-  <div class="container nav-flex">
+  <div class="container nav">
 
     <div class="brand">
-      <img src="assets/images/markzal.png" class="logo-icon">
-      <img src="assets/images/name-markzal.png" class="logo-text">
+      <img src="assets/images/markzal.png">
+      <img src="assets/images/name-markzal.png">
     </div>
 
-    <nav class="nav-links">
+    <nav>
       <a href="#">System</a>
       <a href="#">Modules</a>
-      <a href="#" class="open-modal">Get Started</a>
+      <a href="#" class="btn open-modal">Get Started</a>
     </nav>
 
   </div>
@@ -32,21 +33,18 @@
 <section class="hero">
   <div class="container hero-grid">
 
-    <div class="hero-left">
+    <div>
       <h1>Build your <span>automation system</span></h1>
+      <p>Generate, manage and convert leads with structure.</p>
 
-      <p>
-        A structured digital architecture to generate, manage and convert leads.
-      </p>
-
-      <div class="hero-actions">
-        <a href="#" class="btn-primary open-modal">Get Started</a>
-        <a href="#" class="btn-secondary">View Architecture</a>
+      <div class="actions">
+        <a href="#" class="btn open-modal">Get Started</a>
+        <a href="#" class="btn-outline">View System</a>
       </div>
     </div>
 
-    <div class="hero-right">
-      <img src="assets/images/dashboard.png" class="hero-img">
+    <div class="hero-image">
+      <img src="assets/images/dashboard.png">
     </div>
 
   </div>
@@ -56,41 +54,26 @@
 <section class="section">
   <div class="container">
 
-    <div class="section-header">
-      <h2>System Modules</h2>
-      <p>Each part of your growth engine working together.</p>
-    </div>
+    <h2>System Modules</h2>
 
-    <div class="cards-grid">
+    <div class="grid">
 
       <div class="card">
-        <div class="card-image">
-          <img src="assets/images/card-leads.png">
-        </div>
-        <div class="card-content">
-          <h3>Lead Capture</h3>
-          <p>Optimized landing pages and entry points.</p>
-        </div>
+        <img src="assets/images/card-leads.png">
+        <h3>Lead Capture</h3>
+        <p>High converting entry points.</p>
       </div>
 
       <div class="card">
-        <div class="card-image">
-          <img src="assets/images/card-automation.png">
-        </div>
-        <div class="card-content">
-          <h3>Automation</h3>
-          <p>Smart workflows to qualify and nurture.</p>
-        </div>
+        <img src="assets/images/card-automation.png">
+        <h3>Automation</h3>
+        <p>Smart workflows and sequences.</p>
       </div>
 
       <div class="card">
-        <div class="card-image">
-          <img src="assets/images/card-crm.png">
-        </div>
-        <div class="card-content">
-          <h3>CRM Integration</h3>
-          <p>Centralized pipeline and tracking.</p>
-        </div>
+        <img src="assets/images/card-crm.png">
+        <h3>CRM</h3>
+        <p>Centralized data and pipeline.</p>
       </div>
 
     </div>
@@ -102,37 +85,23 @@
 <section class="section alt">
   <div class="container">
 
-    <div class="section-header">
-      <h2>Without structure, growth collapses</h2>
-    </div>
+    <h2>Without structure, growth collapses</h2>
 
-    <div class="cards-grid">
+    <div class="grid">
 
       <div class="card">
-        <div class="card-image">
-          <img src="assets/images/problem-leads.png">
-        </div>
-        <div class="card-content">
-          <h3>Unpredictable Leads</h3>
-        </div>
+        <img src="assets/images/problem-leads.png">
+        <h3>Unpredictable Leads</h3>
       </div>
 
       <div class="card">
-        <div class="card-image">
-          <img src="assets/images/problem-work.png">
-        </div>
-        <div class="card-content">
-          <h3>Manual Work</h3>
-        </div>
+        <img src="assets/images/problem-work.png">
+        <h3>Manual Work</h3>
       </div>
 
       <div class="card">
-        <div class="card-image">
-          <img src="assets/images/problem-system.png">
-        </div>
-        <div class="card-content">
-          <h3>No System</h3>
-        </div>
+        <img src="assets/images/problem-system.png">
+        <h3>No System</h3>
       </div>
 
     </div>
@@ -144,11 +113,9 @@
 <section class="section">
   <div class="container">
 
-    <div class="section-header">
-      <h2>System Architecture</h2>
-    </div>
+    <h2>System Architecture</h2>
 
-    <div class="diagram-container">
+    <div class="diagram">
       <img src="assets/images/diagram.png">
     </div>
 
@@ -158,55 +125,44 @@
 <!-- CTA -->
 <section class="cta">
   <div class="container">
-    <div class="cta-content">
-      <h2>Start building your system today</h2>
-      <p>Automate, integrate and scale your business.</p>
-      <a href="#" class="btn-primary open-modal">Create Your System</a>
-    </div>
+
+    <h2>Start building your system</h2>
+    <p>Automation + Integration + Growth</p>
+
+    <a href="#" class="btn open-modal">Create System</a>
+
   </div>
 </section>
 
 <!-- MODAL -->
-<div class="modal" id="leadModal">
+<div class="modal" id="modal">
   <div class="modal-box">
 
     <span class="close">&times;</span>
 
-    <h2>Start Your Automation</h2>
+    <h2>Start Now</h2>
 
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <input type="tel" placeholder="Your Phone">
-
-      <select>
-        <option>Select interest</option>
-        <option>Automation</option>
-        <option>Landing Page</option>
-      </select>
-
-      <button class="btn-primary">Submit</button>
-    </form>
+    <input placeholder="Name">
+    <input placeholder="Email">
+    <button class="btn">Submit</button>
 
   </div>
 </div>
 
-<a href="https://wa.me/5511999999999" class="whatsapp">💬</a>
-
 <script>
-const modal = document.getElementById("leadModal");
+const modal = document.getElementById("modal");
 
 document.querySelectorAll(".open-modal").forEach(btn=>{
   btn.onclick = e=>{
     e.preventDefault();
-    modal.classList.add("active");
+    modal.style.display="flex";
   }
 });
 
-document.querySelector(".close").onclick=()=>modal.classList.remove("active");
+document.querySelector(".close").onclick=()=>modal.style.display="none";
 
 window.onclick=e=>{
-  if(e.target==modal) modal.classList.remove("active");
+  if(e.target==modal) modal.style.display="none";
 };
 </script>
 
