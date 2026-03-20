@@ -16,8 +16,8 @@
     <div class="container nav-flex">
 
       <div class="brand">
-        <img src="assets/images/markzal.png" alt="Markzal Logo" class="logo-icon">
-        <img src="assets/images/name-markzal.png" alt="Markzal Name" class="logo-text">
+        <img src="assets/images/markzal.png" class="logo-icon">
+        <img src="assets/images/name-markzal.png" class="logo-text">
       </div>
 
       <nav class="nav-links">
@@ -49,7 +49,7 @@
       </div>
 
       <div class="hero-image reveal delay-3">
-        <img src="assets/images/dashboard.png" alt="Dashboard">
+        <img src="assets/images/dashboard.png">
       </div>
 
     </div>
@@ -67,7 +67,6 @@
       </div>
 
       <div class="grid">
-
         <div class="card glass reveal">
           <h3>Lead Capture</h3>
           <p>Landing pages and forms connected to your system</p>
@@ -82,7 +81,6 @@
           <h3>CRM Integration</h3>
           <p>Centralized data and customer management</p>
         </div>
-
       </div>
 
     </div>
@@ -97,7 +95,6 @@
       </div>
 
       <div class="grid">
-
         <div class="card reveal">
           <img src="assets/images/icon-leads.png" class="icon">
           <h3>Unpredictable Leads</h3>
@@ -112,7 +109,6 @@
           <img src="assets/images/icon-system.png" class="icon">
           <h3>No Structure</h3>
         </div>
-
       </div>
 
     </div>
@@ -127,7 +123,7 @@
       </div>
 
       <div class="diagram-box reveal delay-1">
-        <img src="assets/images/diagram.png" alt="System Diagram">
+        <img src="assets/images/diagram.png">
       </div>
 
     </div>
@@ -140,6 +136,37 @@
       <a href="#" class="btn-primary">Create Your System</a>
     </div>
   </section>
+
+  <!-- MODAL -->
+  <div class="modal" id="leadModal">
+    <div class="modal-content">
+
+      <span class="close">&times;</span>
+
+      <h2>Start Your Automation</h2>
+
+      <form id="leadForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="tel" placeholder="Your Phone">
+
+        <select>
+          <option>Choose your interest</option>
+          <option>Automation System</option>
+          <option>Landing Page</option>
+          <option>Full Solution</option>
+        </select>
+
+        <button type="submit" class="btn-primary">Submit</button>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- WHATSAPP -->
+  <a href="https://wa.me/5511999999999?text=Quero%20automatizar%20meu%20negócio"
+     class="whatsapp-button"
+     target="_blank">💬</a>
 
   <!-- SCRIPT -->
   <script>
@@ -158,6 +185,29 @@
 
     window.addEventListener('scroll', reveal);
     reveal();
+
+    const modal = document.getElementById("leadModal");
+    const openButtons = document.querySelectorAll(".btn-primary");
+    const closeBtn = document.querySelector(".close");
+
+    openButtons.forEach(btn => {
+      btn.addEventListener("click", function(e) {
+        e.preventDefault();
+        modal.style.display = "flex";
+      });
+    });
+
+    closeBtn.onclick = () => modal.style.display = "none";
+
+    window.onclick = (e) => {
+      if (e.target == modal) modal.style.display = "none";
+    };
+
+    document.getElementById("leadForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Lead captured! (Future CRM integration)");
+      modal.style.display = "none";
+    });
   </script>
 
 </body>
